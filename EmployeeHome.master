@@ -1,0 +1,55 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="EmployeeHome.master.cs" Inherits="EmployerHome" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+     <link rel="Stylesheet" href="StyleSheet.css" type="text/css"  />
+</head>
+<body bgcolor="#99ccff">
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 100%">
+            <tr>
+                <td style="font-weight: bold; font-size: 20px; vertical-align: middle; width: 100%;
+                    text-align: center">
+                    <table style="width: 100%">
+                        <tr>
+                            <td style="width: 40%; color: #ffffff; height: 216px; background-color: plum;">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/title.gif" 
+                                    Height="211px" Width="1139px" /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 100%">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#FF99FF" DynamicHorizontalOffset="2"
+            Font-Bold="True" Font-Names="Verdana" Font-Size="Small" ForeColor="#990000" Orientation="Horizontal"
+            StaticSubMenuIndent="10px" Style="font-weight: bold; font-size: 20px; width: 100%">
+            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+            <DynamicMenuStyle BackColor="#FFFBD6" />
+            <StaticSelectedStyle BackColor="#FFCC66" />
+            <DynamicSelectedStyle BackColor="#FFCC66" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <Items>
+                <asp:MenuItem Text="Update Profile" Value="Update_Employee" NavigateUrl="~/updateemp.aspx"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/applyforleave.aspx" Text="Apply for leave" Value="Apply for leave">
+                </asp:MenuItem>
+                <asp:MenuItem Text="Leave Status" Value="Leave Status" 
+                    NavigateUrl="~/viewleaves.aspx"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/EmployeeLogin.aspx" Text="Logout" Value="Logout"></asp:MenuItem>
+            </Items>
+            <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+        </asp:Menu>
+                </td>
+            </tr>
+        </table>
+            <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </div>
+    </form>
+</body>
+</html>
